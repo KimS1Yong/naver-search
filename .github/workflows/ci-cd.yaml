@@ -10,7 +10,11 @@ on:
       mode:
         description: '실행 모드'
         required: true
-        default: 'DEFAULT'
+        default: 'PROD'
+        type: choice
+        options:
+          - PROD
+          - DEV
       search_keyword:
         description: '검색 키워드'
         required: true
