@@ -19,7 +19,7 @@ public class SearchService {
     private final APIClient apiClient;
 
     public SearchService() {
-        Dotenv dotenv = Dotenv.load();
+        Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
         this.clientID = dotenv.get("NAVER_CLIENT_ID");
         this.clientSecret = dotenv.get("NAVER_CLIENT_SECRET");
         if (clientID == null || clientSecret == null) {
